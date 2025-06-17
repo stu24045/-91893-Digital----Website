@@ -1,0 +1,59 @@
+.social-icons a {
+    color: white;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 6px;
+    margin-left: 10px;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold;
+    border-bottom: 3px solid white;
+}
+
+table th, table td {
+    vertical-align: middle;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.table thead th {
+    background-color: #212529;
+    color: #fff;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Open = green, Closed = red */
+.open {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.closed {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+table {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 500;
+}

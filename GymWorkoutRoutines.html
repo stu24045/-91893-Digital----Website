@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="mystyles.css" />
+
+    <!-- Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+        <a class="navbar-brand" href="#">ASHS GYM</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="LatestNews.html">Latest News</a></li>
+                <li class="nav-item"><a class="nav-link" href="GymWorkoutRoutines.html">Gym Workouts</a></li>
+                <li class="nav-item"><a class="nav-link" href="PhotoGallery.html">Photo Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="Guidelines.html">Guidelines</a></li>
+            </ul>
+
+            <!-- Social Media Icons -->
+            <div class="navbar-nav social-icons">
+                <a class="nav-link" href="https://www.facebook.com/ashssports/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="nav-link" href="https://www.instagram.com/ashs_sports/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <img src="./Images/ASHS GYM IMAGE EST 2009.webp" alt="Image Description">
+
+    <!-- jQuery script to highlight active tab -->
+    <script>
+        $(document).ready(function () {
+            var current = window.location.pathname.split("/").pop();
+
+            $('.navbar-nav .nav-link').each(function () {
+                var linkPage = $(this).attr('href');
+
+                if (linkPage === current) {
+                    $('.navbar-nav .nav-item').removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
