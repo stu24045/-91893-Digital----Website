@@ -88,3 +88,40 @@ body {
     font-size: 1.2rem;
     color: #555;
 }
+
+.card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+
+ .custom-img-header {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .custom-img-news {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .custom-img-workout {
+            width: 100%;
+            height: 200px;
+            object-fit: scale-down;
+        }
+
+        .custom-img-gallery {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .custom-img-guidelines {
+            width: 100%;
+            height: 195px;
+            object-position: 70% 50%;
+            object-fit: scale-down;
+        }
