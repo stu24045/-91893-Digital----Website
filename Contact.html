@@ -14,12 +14,14 @@
 
     <!-- Font Awesome 5.15.4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Contact | ASHS GYM</title>
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
         <a class="navbar-brand" href="#">ASHS GYM</a>
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +30,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="LatestNews.html">Latest News</a></li>
-                <li class="nav-item"><a class="nav-link" href="GymWorkoutRoutines.html">Gym Workouts</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="PhotoGallery.html">Photo Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="Guidelines.html">Guidelines</a></li>
             </ul>
@@ -41,16 +43,41 @@
         </div>
     </nav>
 
-    <img src="./Images/ASHS GYM IMAGE EST 2009.webp" alt="Image Description">
+    <!-- HEADER IMAGE -->
+    <img src="./Images/ASHS GYM IMAGE EST 2009.webp" alt="ASHS Gym Image" class="img-fluid w-100" />
 
-    <!-- jQuery script to highlight active tab -->
+    <!-- CONTACT FORM SECTION -->
+    <div class="container mt-5 mb-5">
+        <h2 class="mb-4">Contact Us</h2>
+        <form action="https://submit-form.com/9eLTEE1Af" method="POST">
+            <div class="form-group">
+                <label for="name">Name<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email<span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message<span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Optional: Redirect after submit -->
+            <input type="hidden" name="_redirect" value="thankyou.html" />
+
+            <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+    </div>
+
+    <!-- ACTIVE TAB SCRIPT -->
     <script>
         $(document).ready(function () {
             var current = window.location.pathname.split("/").pop();
-
             $('.navbar-nav .nav-link').each(function () {
                 var linkPage = $(this).attr('href');
-
                 if (linkPage === current) {
                     $('.navbar-nav .nav-item').removeClass('active');
                     $(this).parent().addClass('active');
